@@ -1,0 +1,11 @@
+.date__4 {
+    margin-top: 355px;
+}
+
+.timeline__fourth-content {
+    display: grid;
+    grid-template-columns: 1fr 328px 4fr;
+    background: lightgreen;
+    margin: 0;
+    padding: 0;
+}

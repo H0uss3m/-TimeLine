@@ -1,0 +1,11 @@
+.date__2 {
+    margin-top: 95px;
+}
+
+.timeline__second-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr 688px;
+    background: lightsalmon;
+    margin: 0;
+    padding: 0;
+}

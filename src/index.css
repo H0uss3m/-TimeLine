@@ -5,6 +5,9 @@ body {
   color: #000;
   margin: 0;
   padding: 0;
+  font-family: aktiv-grotesk, sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 html {
@@ -14,13 +17,13 @@ html {
   height: 100vh;
 }
 
-.react-tabs__tab--selected>.timeline__tab-with-content {
+.react-tabs__tab--selected>div>.timeline__tab-with-content, .react-tabs__tab--selected>div>.timeline__today-tab {
   position: static;
-  height: 1px;
+  height: 2px;
   left: 32px;
   top: 99px;
   background: #222;
-  margin-top: 8px;
+  /* margin-top: 8px; */
   width: 64px;
   transition: width 0.5s;
 }
@@ -53,11 +56,11 @@ html {
 .timeline__tab-with-content {
   position: static;
   width: 32px;
-  height: 1px;
+  height: 0.5px;
   left: 32px;
   top: 99px;
   background: #222;
-  margin-top: 8px;
+  /* margin-top: 8px; */
 }
 
 .timeline__today-tab {
@@ -67,7 +70,6 @@ html {
   left: 32px;
   top: 99px;
   background: #222;
-  margin-top: 8px;
 }
 
 .timeline__date {
@@ -91,7 +93,7 @@ html {
   letter-spacing: '-0.01em';
 }
 
-.timeline__tab:hover {
+.tiHouvri {
   width: 64px !important;
-  transition: width 0.5s;
+  transition: width 0.15s;
 }

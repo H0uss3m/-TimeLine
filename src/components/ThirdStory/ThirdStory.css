@@ -1,0 +1,11 @@
+.date__3 {
+    margin-top: 245px;
+}
+
+.timeline__third-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 328px 4fr;
+    background: lightgoldenrodyellow;
+    margin: 0;
+    padding: 0;
+}
