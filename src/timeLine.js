@@ -11,10 +11,7 @@ const TimeLineTabsList = ({
   for (let i = 0; i < length; i++) {
     array.push({ key: i });
   }
-  console.log(
-    "array",
-    array.map((item, index) => item.key === index)
-  );
+
   return array.map((item, index) => (
     <div
       style={{
@@ -30,7 +27,7 @@ const TimeLineTabsList = ({
     >
       <div
         className={`timeline__tab  ${
-          uniqKey + index !== activeTabIndex ? "" : "tiHouvri"
+          uniqKey + index !== activeTabIndex ? "" : "timeline__active-tab"
         }`}
         key={index}
         style={{

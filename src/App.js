@@ -10,11 +10,15 @@ import { useState } from "react";
 
 const App = () => {
   const [activeTabIndex, setActiveTabIndex] = useState(0);
-
+  const [focus, setFocus] = useState(false);
   return (
     <div className="timeline__container">
       <Tabs className="timeline__tabs">
-        <TabList className="timeline__tab-list">
+        <TabList
+          onMouseEnter={() => setFocus(true)}
+          onMouseLeave={() => setFocus(false)}
+          className={`timeline__tab-list ${focus ? "" : "focus"}`}
+        >
           <Tab>
             <div
               onMouseEnter={() => {
@@ -27,7 +31,7 @@ const App = () => {
             >
               <div
                 className={`timeline__tab-with-content ${
-                  activeTabIndex !== 0 ? "" : "tiHouvri"
+                  activeTabIndex !== 0 ? "" : "timeline__active-tab"
                 }`}
               ></div>
             </div>
@@ -45,7 +49,7 @@ const App = () => {
             >
               <div
                 className={`timeline__tab-with-content ${
-                  activeTabIndex !== 1 ? "" : "tiHouvri"
+                  activeTabIndex !== 1 ? "" : "timeline__active-tab"
                 }`}
               ></div>
             </div>
@@ -63,7 +67,7 @@ const App = () => {
             >
               <div
                 className={`timeline__tab-with-content ${
-                  activeTabIndex !== 2 ? "" : "tiHouvri"
+                  activeTabIndex !== 2 ? "" : "timeline__active-tab"
                 }`}
               ></div>
             </div>
@@ -71,7 +75,11 @@ const App = () => {
           </Tab>
           <Tab>
             <div style={{ padding: "4px 0px" }}>
-              <div className="timeline__today-tab"></div>
+              <div
+                className={`timeline__tab-with-content ${
+                  activeTabIndex !== 2 ? "" : "timeline__active-tab"
+                }`}
+              ></div>
             </div>
           </Tab>
         </TabList>

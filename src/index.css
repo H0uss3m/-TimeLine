@@ -17,7 +17,7 @@ html {
   height: 100vh;
 }
 
-.react-tabs__tab--selected>div>.timeline__tab-with-content, .react-tabs__tab--selected>div>.timeline__today-tab {
+.react-tabs__tab--selected>div>.timeline__tab-with-content {
   position: static;
   height: 2px;
   left: 32px;
@@ -63,7 +63,7 @@ html {
   /* margin-top: 8px; */
 }
 
-.timeline__today-tab {
+.timeline__tab-list li:last-child .timeline__tab-with-content {
   position: static;
   width: 64px;
   height: 1px;
@@ -93,7 +93,21 @@ html {
   letter-spacing: '-0.01em';
 }
 
-.tiHouvri {
+.timeline__active-tab {
   width: 64px !important;
   transition: width 0.15s;
+}
+
+.timeline__active-tab::after {
+  content: '▶';
+  position: absolute;
+  left: 65px;
+  margin-top: -7px;
+}
+
+.focus .react-tabs__tab--selected>div>.timeline__tab-with-content::after {
+  content: '▶';
+  position: absolute;
+  left: 65px;
+  margin-top: -7px;
 }
