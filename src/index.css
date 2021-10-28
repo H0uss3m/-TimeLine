@@ -51,6 +51,7 @@ html {
   /* background: lightblue; */
   margin: 0;
   padding: 0;
+  height: 80%;
 }
 
 .timeline__tab-with-content {

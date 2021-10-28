@@ -5,7 +5,7 @@
 .timeline__third-content {
     display: grid;
     grid-template-columns: 1fr 1fr 328px 4fr;
-    background: lightgoldenrodyellow;
+    /* background: lightgoldenrodyellow; */
     margin: 0;
     padding: 0;
 }

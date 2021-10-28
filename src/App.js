@@ -74,10 +74,18 @@ const App = () => {
             <TimeLineTabsList uniqKey="thirdStory" color="#222" length={9} />
           </Tab>
           <Tab>
-            <div style={{ padding: "4px 0px" }}>
+            <div
+              onMouseEnter={() => {
+                setActiveTabIndex(3);
+              }}
+              onMouseLeave={() => {
+                setActiveTabIndex("");
+              }}
+              style={{ padding: "4px 0px" }}
+            >
               <div
                 className={`timeline__tab-with-content ${
-                  activeTabIndex !== 2 ? "" : "timeline__active-tab"
+                  activeTabIndex !== 3 ? "" : "timeline__active-tab"
                 }`}
               ></div>
             </div>
