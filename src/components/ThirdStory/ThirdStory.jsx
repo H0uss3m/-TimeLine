@@ -1,76 +1,28 @@
 import React from "react";
-import image3 from "../../images/Image3.jpg";
+import ReactHtmlParser from "react-html-parser";
 import "./ThirdStory.css";
-const ThirdStory = () => {
+const ThirdStory = ({ data = [], API_URL }) => {
+  const { date, storyDescription, storyTitle, stroyPicture } = data;
+
   return (
     <>
-      <div className="timeline__date date__3">1990</div>
-      <h1
-        style={{
-          position: "static",
-          width: "331px",
-          height: "177px",
-          left: "0px",
-          top: "0px",
-
-          /* Aktiv Grotesk/Regular/48-48 */
-
-          fontSize: "48px",
-          lineHeight: "100%",
-          /* or 48px */
-
-          letterSpacing: "-0.02em",
-
-          /* Font / Dark */
-
-          color: "#222",
-
-          mixBlendMode: "normal",
-
-          /* Inside Auto Layout */
-
-          flex: "none",
-          order: " 0",
-          flexGrow: "0",
-          margin: " 0px ",
-        }}
-      >
-        Strong heritage is the foundation for a prosperous future
+      <div className="timeline__date date__3">
+        <p>{date}</p>
+      </div>
+      <h1 className={storyTitle ? "timeline__third-story-title" : ""}>
+        {storyTitle}
       </h1>
-      <figure
-        style={{
-          maxHeight: "392px",
-          maxWidth: "328px",
-          margin: 0,
-          padding: 0,
-          marginRight: "32px",
-        }}
-      >
+      <figure className="timeline__third-story-figure">
         <img
-          style={{ width: "100%", height: "100%", objectFit: "cover" }}
-          src={image3}
-          alt="story1"
+          className="timeline__story-img"
+          src={API_URL + stroyPicture?.url}
+          alt="story3"
         />
       </figure>
       <div>
-        <p
-          style={{
-            position: "static",
-            width: " 328px",
-            height: "192px",
-            left: "360px",
-            bottom: "0px",
-            fontSize: "24px",
-            lineHeight: " 100%",
-            display: "flex",
-            alignItems: "flex-end",
-            letterSpacing: "-0.01em",
-          }}
-        >
-          Modernism sprouted in the late 1800s as a reaction to overly ornate
-          and artificial interiors, architecture and art. Meanwhile, by the
-          1930s, this movement that valued function above form truly bloomed.{" "}
-        </p>
+        <div className="timeline__third-story-description">
+          <p> {ReactHtmlParser(storyDescription)}</p>
+        </div>
       </div>
     </>
   );

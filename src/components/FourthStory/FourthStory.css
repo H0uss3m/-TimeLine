@@ -1,11 +1,60 @@
-.date__4 {
-    margin-top: 295px;
+.date__4>p {
+    margin-top: 310px;
+    width: 50%;
 }
 
 .timeline__fourth-content {
     display: grid;
-    grid-template-columns: 1fr 328px 4fr;
-    /* background: lightgreen; */
+    grid-template-columns: 208px 328px 1fr;
     margin: 0;
     padding: 0;
+}
+
+.timeline__fourth-story-figure {
+    max-height: 392px;
+    max-width: 328px;
+    margin: 0;
+    padding: 0;
+    margin-right: 32px;
+}
+
+.timeline__fourth-story-title {
+    position: static;
+    width: 688px;
+    height: 144px;
+    left: 0px;
+    top: 0px;
+    /* Aktiv Grotesk/Regular/48-48 */
+    font-size: 48px;
+    line-height: 100%;
+    /* or 48px */
+    letter-spacing: -0.02em;
+    /* Font / Dark */
+    color: #222;
+    mix-blend-mode: normal;
+    font-weight: normal;
+    /* Inside Auto Layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 0px 32px 0px;
+}
+
+.timeline__fourth-story-description>p {
+    display: flex;
+    flex-direction: column;
+    position: static;
+    width: 328px;
+    height: 192px;
+    left: 360px;
+    bottom: 0px;
+    font-size: 24px;
+    line-height: 100%;
+    display: flex;
+    align-items: flex-end;
+    letter-spacing: -0.01em;
+}
+
+.timeline__fourth-story-description>p>p {
+    /* margin: 0; */
 }

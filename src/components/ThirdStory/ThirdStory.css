@@ -1,11 +1,59 @@
-.date__3 {
-    margin-top: 205px;
+.date__3>p {
+    margin-top: 230px;
+    width: 50%;
 }
 
 .timeline__third-content {
     display: grid;
-    grid-template-columns: 1fr 1fr 328px 4fr;
+    grid-template-columns: 208px 363px 360px 1fr;
     /* background: lightgoldenrodyellow; */
     margin: 0;
     padding: 0;
+}
+
+.timeline__third-story-title {
+    position: static;
+    width: 331px;
+    height: 177px;
+    left: 0px;
+    top: 0px;
+    /* Aktiv Grotesk/Regular/48-48 */
+    font-size: 48px;
+    line-height: 100%;
+    /* or 48px */
+    letter-spacing: -0.02em;
+    /* Font / Dark */
+    color: #222;
+    mix-blend-mode: normal;
+    font-weight: normal;
+    /* Inside Auto Layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px;
+}
+
+.timeline__third-story-figure {
+    max-height: 392px;
+    max-width: 328px;
+    margin: 0;
+    padding: 0;
+    margin-right: 32px;
+}
+
+.timeline__third-story-description>p {
+    position: static;
+    width: 328px;
+    height: 192px;
+    left: 360px;
+    bottom: 0px;
+    font-size: 24px;
+    line-height: 100%;
+    display: flex;
+    align-items: flex-end;
+    letter-spacing: -0.01em;
+}
+
+.timeline__third-story-description>p>p:first-child {
+    margin: 0;
 }

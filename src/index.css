@@ -1,6 +1,5 @@
 body {
   background: #eee;
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 14px;
   color: #000;
   margin: 0;
@@ -31,17 +30,16 @@ html {
 .timeline__container {
   max-width: 1440px;
   width: 100%;
-  margin: auto
+  margin: auto;
 }
 
 .timeline__tabs {
   display: grid;
-  grid-template-columns: 136px 1fr;
+  grid-template-columns: 64px 1fr;
   grid-template-rows: 1fr;
   width: 100%;
   height: 100%;
-  /* background: red; */
-  padding-left: 40px;
+  /* padding-left: 40px; */
 }
 
 .timeline__tab-list {
@@ -52,6 +50,11 @@ html {
   margin: 0;
   padding: 0;
   height: 80%;
+  margin-top: 20px;
+}
+
+.timeline__tab-container {
+  padding: 4px 0px
 }
 
 .timeline__tab-with-content {
@@ -77,21 +80,20 @@ html {
   width: 208px;
   height: 48px;
   font-size: 48px;
-  /* background: purple; */
-  margin-right: 32px;
+  margin-left: 32px;
 }
 
 .timeline__description {
-  position: 'static';
-  width: ' 328px';
-  height: '192px';
-  left: '360px';
-  bottom: '0px';
-  font-size: '24px';
-  line-height: ' 100%';
-  display: 'flex';
-  align-items: 'flex-start';
-  letter-spacing: '-0.01em';
+  position: static;
+  width: 328px;
+  height: 192px;
+  left: 360px;
+  bottom: 0px;
+  font-size: 24px;
+  line-height: 100%;
+  display: flex;
+  align-items: flex-start;
+  letter-spacing: -0.01em;
 }
 
 .timeline__active-tab {
@@ -102,13 +104,56 @@ html {
 .timeline__active-tab::after {
   content: '▶';
   position: absolute;
-  left: 65px;
+  left: 57.5px;
   margin-top: -7px;
 }
 
 .focus .react-tabs__tab--selected>div>.timeline__tab-with-content::after {
   content: '▶';
   position: absolute;
-  left: 65px;
+  left: 57.5px;
   margin-top: -7px;
+}
+
+.timeline__tab-panel-container {
+  display: grid;
+  width: 100%
+}
+
+.timeline__mobile-tab-list {
+  display: none;
+}
+
+@media (max-width:1023px) {
+  .timeline__container {
+    max-width: 100vw;
+    overflow: hidden;
+  }
+  .timeline__tab-list {
+    display: none;
+  }
+  .timeline__mobile-tab-list {
+    display: none;
+  }
+  .timeline__tab-panel-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden !important;
+    margin-left: 16px;
+  }
+  .timeline__first-content, .timeline__third-content {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+  }
+  .timeline__date {
+    width: 100%;
+  }
+  /* date */
+  .date__1 {
+    margin: 16px 0px 40px 8px !important;
+  }
+  .timeline__first-story-description>p {
+    margin-left: 0px !important;
+  }
 }
